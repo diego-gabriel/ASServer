@@ -7,7 +7,7 @@ import java.util.Date;
  *
  * @author Alison Fernandez
  */
-public class Cabecera {
+public class Header {
     
     private int estado;
     private String fecha;
@@ -15,7 +15,7 @@ public class Cabecera {
     private String conexion;
     private String tipoContenido;
 
-    public Cabecera(int estadoPeticion, String recurso){
+    public Header(int estadoPeticion, String recurso){
         estado = estadoPeticion;
         servidor = "Apachurrito Alita";
         conexion = "Cerrada";
@@ -47,9 +47,9 @@ public class Cabecera {
     
     @Override
     public boolean equals(Object otro){
-        return this.estado == ((Cabecera)otro).getEstado() && 
-               this.fecha.equals(((Cabecera)otro).getFecha()) && 
-               this.tipoContenido.equals(((Cabecera)otro).getTipoContenido());
+        return this.estado == ((Header)otro).getEstado() && 
+               this.fecha.equals(((Header)otro).getFecha()) && 
+               this.tipoContenido.equals(((Header)otro).getTipoContenido());
     }
     
 }

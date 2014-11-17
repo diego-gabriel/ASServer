@@ -6,12 +6,12 @@
  */
 public class CabeceraOK{
     
-    private Cabecera cabezaDefecto;
+    private Header cabezaDefecto;
     private String metodo;
     private String ultimaModificacion;
 
     public CabeceraOK(int estadoPeticion, String metodo, String recurso) {
-        cabezaDefecto = new Cabecera(estadoPeticion, recurso);
+        cabezaDefecto = new Header(estadoPeticion, recurso);
         this.metodo = metodo;
         setultimaModificacion(recurso);
     }
@@ -24,7 +24,7 @@ public class CabeceraOK{
         return ultimaModificacion;
     }
     
-    public Cabecera getPorDefecto(){
+    public Header getPorDefecto(){
         return cabezaDefecto;
     }
     

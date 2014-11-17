@@ -11,23 +11,23 @@ import static org.junit.Assert.*;
  *
  * @author Usuario
  */
-public class CabeceraTest {
+public class HeaderTest {
     
-    public CabeceraTest() {
+    public HeaderTest() {
     }
 
     @Test
     public void testCabecerasIguales() {
-        Cabecera cabecera1 = new Cabecera(404, "/lala.html");
-        Cabecera cabecera2 = new Cabecera(404, "/lala.html");
+        Header cabecera1 = new Header(404, "/lala.html");
+        Header cabecera2 = new Header(404, "/lala.html");
         boolean respuestaCalculada = cabecera1.equals(cabecera2);
         assertTrue(respuestaCalculada);
     }
     
     @Test
     public void testCabecerasDiferentes() {
-        Cabecera cabecera1 = new Cabecera(404, "/lala.html");
-        Cabecera cabecera2 = new Cabecera(400, "");
+        Header cabecera1 = new Header(404, "/lala.html");
+        Header cabecera2 = new Header(400, "");
         boolean respuestaCalculada = cabecera1.equals(cabecera2);
         assertFalse(respuestaCalculada);
     }

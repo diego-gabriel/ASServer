@@ -8,7 +8,7 @@ public class RespuestaHttp {
     private Object cabeza;
     
     public RespuestaHttp(int estado, String recurso){
-        cabeza = new Cabecera(estado, recurso);
+        cabeza = new Header(estado, recurso);
     }
 
     public RespuestaHttp(int estadoPeticion, String recurso, String metodo) {
