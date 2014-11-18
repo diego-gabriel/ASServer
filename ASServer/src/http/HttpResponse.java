@@ -1,17 +1,19 @@
+package http;
+
 
 /**
  *
  * @author Alison Fernandez
  */
-public class RespuestaHttp {
+public class HttpResponse {
     
     private Object cabeza;
     
-    public RespuestaHttp(int estado, String recurso){
+    public HttpResponse(int estado, String recurso){
         cabeza = new Header(estado, recurso);
     }
 
-    public RespuestaHttp(int estadoPeticion, String recurso, String metodo) {
+    public HttpResponse(int estadoPeticion, String recurso, String metodo) {
         cabeza = new CabeceraOK(estadoPeticion, metodo, recurso);
     }
     
@@ -21,7 +23,7 @@ public class RespuestaHttp {
     
     @Override
     public boolean equals(Object otraRespuesta){
-        Object cabezaOtro = ((RespuestaHttp)otraRespuesta).getCabeza();
+        Object cabezaOtro = ((HttpResponse)otraRespuesta).getCabeza();
         return cabezaOtro.equals(cabeza);
     }
 }

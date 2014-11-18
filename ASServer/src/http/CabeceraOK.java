@@ -1,3 +1,8 @@
+package http;
+
+
+import resourceManager.ResourceManager;
+
 
 
 /**
@@ -30,15 +35,14 @@ public class CabeceraOK{
     
 
     private void setultimaModificacion(String recurso) {
-        ManejadorArchivo manejador = new ManejadorArchivo();
+        ResourceManager manejador = new ResourceManager();
         ultimaModificacion = manejador.getultimaModificacion(recurso);
     }
     
-    @Override
-    public boolean equals(Object otro){
-        return cabezaDefecto.equals(((CabeceraOK)otro).getPorDefecto()) && 
-            metodo.equals(((CabeceraOK)otro).getMetodo()) &&
-            ultimaModificacion.equals(((CabeceraOK)otro).getUltimaModif());
+    public boolean equals(CabeceraOK otro){
+        return cabezaDefecto.equals(otro.cabezaDefecto) && 
+            metodo.equals(otro.metodo) &&
+            ultimaModificacion.equals(otro.ultimaModificacion);
     }
     
 }

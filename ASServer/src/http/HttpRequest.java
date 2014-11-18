@@ -1,16 +1,18 @@
+package http;
+
 
 /**
  *
  * @author Alison Fernandez
  */
-public class PeticionHttp {
+public class HttpRequest {
     
     private String metodo;
     private String recurso;
     private String version;
     private String DEFAULT_VALUE = "/index.html";
     
-    public PeticionHttp(String metodo, String recurso, String version){
+    public HttpRequest(String metodo, String recurso, String version){
         this.metodo = metodo;
         if(recurso.equals("/")){
             recurso = DEFAULT_VALUE;

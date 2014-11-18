@@ -1,4 +1,7 @@
+package http;
 
+
+import resourceManager.ResourceManager;
 import java.util.Date;
 
 
@@ -29,7 +32,7 @@ public class Header {
     }
     
     private void setTipo(String recurso){
-        ManejadorArchivo manejador = new ManejadorArchivo();
+        ResourceManager manejador = new ResourceManager();
         tipoContenido = manejador.getTipo(recurso);
     }
     
@@ -45,11 +48,10 @@ public class Header {
         return tipoContenido;
     }
     
-    @Override
-    public boolean equals(Object otro){
-        return this.estado == ((Header)otro).getEstado() && 
-               this.fecha.equals(((Header)otro).getFecha()) && 
-               this.tipoContenido.equals(((Header)otro).getTipoContenido());
+    public boolean equals(Header otro){
+        return estado == (otro.estado) && 
+               fecha.equals(otro.fecha) && 
+               tipoContenido.equals(otro.tipoContenido);
     }
     
 }

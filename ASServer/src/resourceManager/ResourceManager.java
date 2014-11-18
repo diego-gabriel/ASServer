@@ -1,3 +1,5 @@
+package resourceManager;
+
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,7 +10,7 @@ import java.util.Date;
  *
  * @author Usuario
  */
-public class ManejadorArchivo {
+public class ResourceManager {
     
     public boolean existe(String recurso){
         try {

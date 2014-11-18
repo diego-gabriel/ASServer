@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import resourceManager.ResourceManager;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -11,21 +12,21 @@ import static org.junit.Assert.*;
  *
  * @author Usuario
  */
-public class ManejadorArchivoTest {
+public class ResourceManagerTest {
     
-    public ManejadorArchivoTest() {
+    public ResourceManagerTest() {
     }
 
     @Test
     public void testRecursoExistente() {
-        ManejadorArchivo manejador = new ManejadorArchivo();
+        ResourceManager manejador = new ResourceManager();
         boolean respuestaCalculada = manejador.existe("archivos/index.html");
         assertTrue(respuestaCalculada);
     }
     
     @Test
     public void testRecursoNoExistente() {
-        ManejadorArchivo manejador = new ManejadorArchivo();
+        ResourceManager manejador = new ResourceManager();
         boolean respuestaCalculada = manejador.existe("archivos/lala.html");
         assertFalse(respuestaCalculada);
     }

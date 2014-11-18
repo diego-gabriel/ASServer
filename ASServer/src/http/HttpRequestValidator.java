@@ -1,24 +1,29 @@
+package http;
+
+
+import resourceManager.ResourceManager;
+
 
 /**
  *
  * @author Alison Fernandez
  */
-public class ValidadorPeticion {
+public class HttpRequestValidator {
     
     private String metodos[] = {"HEAD", "GET", "POST"};
     private String ruta;
     
-    public ValidadorPeticion(String ruta){
+    public HttpRequestValidator(String ruta){
         this.ruta = ruta;
     }
     
-    public int getEstado(PeticionHttp peticion){
+    public int getEstado(HttpRequest peticion){
         String metodo, recurso, version;
         metodo = peticion.getMetodo();
         recurso = peticion.getRecurso();
         version = peticion.getVersion();
         
-        ManejadorArchivo controlador = new ManejadorArchivo();
+        ResourceManager controlador = new ResourceManager();
         
         if(!metodoImplementado(metodo))
             return 501;
