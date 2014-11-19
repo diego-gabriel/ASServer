@@ -30,7 +30,7 @@ public class HttpRequestValidator {
         if(recurso.isEmpty())
             return 400;
         if(!version.equals("HTTP/1.0"))
-            return 400;
+            return 505;
         if(controlador.existe(ruta + recurso))
             return 200;
         else

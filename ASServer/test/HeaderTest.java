@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 
-import http.Header;
+
+
+import http.HttpHeader;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -19,16 +21,16 @@ public class HeaderTest {
 
     @Test
     public void testCabecerasIguales() {
-        Header cabecera1 = new Header(404, "/lala.html");
-        Header cabecera2 = new Header(404, "/lala.html");
+        HttpHeader cabecera1 = new HttpHeader(404, "/lala.html");
+        HttpHeader cabecera2 = new HttpHeader(404, "/lala.html");
         boolean respuestaCalculada = cabecera1.equals(cabecera2);
         assertTrue(respuestaCalculada);
     }
     
     @Test
     public void testCabecerasDiferentes() {
-        Header cabecera1 = new Header(404, "/lala.html");
-        Header cabecera2 = new Header(400, "");
+        HttpHeader cabecera1 = new HttpHeader(404, "/lala.html");
+        HttpHeader cabecera2 = new HttpHeader(400, "");
         boolean respuestaCalculada = cabecera1.equals(cabecera2);
         assertFalse(respuestaCalculada);
     }

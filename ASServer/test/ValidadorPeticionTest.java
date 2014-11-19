@@ -60,7 +60,7 @@ public class ValidadorPeticionTest {
         HttpRequest peticion = new HttpRequest("HEAD", "/", "HTTP/1.1");
         HttpRequestValidator validador = new HttpRequestValidator("archivos");
         int resultadoCalculado = validador.getEstado(peticion);
-        int resultadoEsperado = 400;
+        int resultadoEsperado = 505;
         assertEquals(resultadoEsperado, resultadoCalculado);
     }
 
@@ -105,7 +105,7 @@ public class ValidadorPeticionTest {
         HttpRequest peticion = new HttpRequest("GET", "/", "HTTP/1.1");
         HttpRequestValidator validador = new HttpRequestValidator("archivos");
         int resultadoCalculado = validador.getEstado(peticion);
-        int resultadoEsperado = 400;
+        int resultadoEsperado = 505;
         assertEquals(resultadoEsperado, resultadoCalculado);
     }
 

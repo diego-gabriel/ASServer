@@ -10,20 +10,25 @@ import java.util.Date;
  *
  * @author Alison Fernandez
  */
-public class Header {
+public class HttpHeader {
     
-    private int estado;
-    private String fecha;
-    private String servidor;
-    private String conexion;
+    private int estado; 
+    private String fecha; 
+    private final String servidor;
     private String tipoContenido;
 
-    public Header(int estadoPeticion, String recurso){
+    public HttpHeader(int estadoPeticion, String recurso){
         estado = estadoPeticion;
-        servidor = "Apachurrito Alita";
-        conexion = "Cerrada";
+        servidor = "Apachurrito";
         setFecha();
         setTipo(recurso);
+    }
+    
+    public HttpHeader(int status){
+        //implementar
+        servidor = null;
+        fecha = null;
+        tipoContenido = null;
     }
     
     private void setFecha(){
@@ -48,7 +53,12 @@ public class Header {
         return tipoContenido;
     }
     
-    public boolean equals(Header otro){
+    public boolean equals(HttpHeader otro){
+        
+        System.out.println(estado + " -> " + otro.estado);
+        System.out.println(fecha + " -> " + otro.fecha);
+        System.out.println(tipoContenido + " -> " + otro.tipoContenido);
+
         return estado == (otro.estado) && 
                fecha.equals(otro.fecha) && 
                tipoContenido.equals(otro.tipoContenido);

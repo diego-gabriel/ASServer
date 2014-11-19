@@ -10,7 +10,7 @@ public class HttpResponse {
     private Object cabeza;
     
     public HttpResponse(int estado, String recurso){
-        cabeza = new Header(estado, recurso);
+        cabeza = new HttpHeader(estado, recurso);
     }
 
     public HttpResponse(int estadoPeticion, String recurso, String metodo) {

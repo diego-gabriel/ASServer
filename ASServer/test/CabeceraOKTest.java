@@ -18,8 +18,12 @@ public class CabeceraOKTest {
     @Test
     public void testCabecerasDiferentes() {
         CabeceraOK cabecera1 = new CabeceraOK(200, "GET", "archivos/index.html");
-        CabeceraOK cabecera2 = new CabeceraOK(200, "GET", "archivos/diferente.html");
+        CabeceraOK cabecera2 = new CabeceraOK(404, "GET", "archivos/diferentes.html");
         boolean respuestaCalculada = cabecera1.equals(cabecera2);
+        if (respuestaCalculada)
+            System.out.println("ok");
+        else
+            System.out.println("no");
         assertFalse(respuestaCalculada);
     }
     
