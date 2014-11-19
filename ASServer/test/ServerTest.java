@@ -1,5 +1,6 @@
 
 
+import http.HttpHeader;
 import webServer.Server;
 import http.HttpRequest;
 import http.HttpResponse;
@@ -22,6 +23,7 @@ public class ServerTest {
         HttpResponse respuestaCalculada = servidor.getRespuesta(peticion);
         HttpResponse respuestaEsperada = new HttpResponse(501, "");
         assertEquals(respuestaEsperada, respuestaCalculada);
+        
     }
     
     @Test
@@ -47,8 +49,8 @@ public class ServerTest {
         HttpRequest peticion = new HttpRequest("GET", "/", "HTTP/1.0");
         Server servidor = new Server();
         HttpResponse respuestaCalculada = servidor.getRespuesta(peticion);
-        HttpResponse respuestaEsperada = new HttpResponse(200, "archivos/index.html", "GET");
+        HttpResponse respuestaEsperada = new HttpResponse(200, "root/index.html", "GET");
         assertEquals(respuestaEsperada, respuestaCalculada);
     }
-    
+  
 }

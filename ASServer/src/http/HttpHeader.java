@@ -53,15 +53,22 @@ public class HttpHeader {
         return tipoContenido;
     }
     
-    public boolean equals(HttpHeader otro){
-        
-        System.out.println(estado + " -> " + otro.estado);
-        System.out.println(fecha + " -> " + otro.fecha);
-        System.out.println(tipoContenido + " -> " + otro.tipoContenido);
+    @Override
+    public boolean equals(Object otro){
+        boolean respuesta = false;
+        if(otro instanceof HttpHeader)
+        {
+            HttpHeader otherHeader = (HttpHeader)otro;
+            System.out.println(estado + " -> " + otherHeader.estado);
+            System.out.println(fecha + " -> " + otherHeader.fecha);
+            System.out.println(tipoContenido + " -> " + otherHeader.tipoContenido);
 
-        return estado == (otro.estado) && 
-               fecha.equals(otro.fecha) && 
-               tipoContenido.equals(otro.tipoContenido);
+            respuesta =  estado == (otherHeader.estado) && 
+               fecha.equals(otherHeader.fecha) && 
+               tipoContenido.equals(otherHeader.tipoContenido);
+        }
+        
+        return respuesta;
     }
     
 }

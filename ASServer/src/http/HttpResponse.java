@@ -23,7 +23,13 @@ public class HttpResponse {
     
     @Override
     public boolean equals(Object otraRespuesta){
-        Object cabezaOtro = ((HttpResponse)otraRespuesta).getCabeza();
-        return cabezaOtro.equals(cabeza);
+        boolean respuesta = false;
+        if(otraRespuesta instanceof HttpResponse)
+        {
+            Object cabezaOtro = ((HttpResponse)otraRespuesta).getCabeza();
+            respuesta = cabezaOtro.equals(cabeza);
+        }
+        
+        return respuesta;
     }
 }
