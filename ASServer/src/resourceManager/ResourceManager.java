@@ -12,38 +12,38 @@ import java.util.Date;
  */
 public class ResourceManager {
     
-    public boolean existe(String recurso){
+    public boolean existe(String resource){
         try {
-            FileInputStream archivo = new FileInputStream(recurso);
+            FileInputStream file = new FileInputStream(resource);
             return  true;
         } catch (FileNotFoundException ex) {
             return  false;
         }
     }
 
-    public String getTipo(String recurso) {
-        if(recurso.contains(".html")){
+    public String getType(String resource) {
+        if(resource.contains(".html")){
             return "text/html";
         }
-        if(recurso.endsWith(".css")){
+        if(resource.endsWith(".css")){
             return "text/css";
         }
-        if(recurso.endsWith(".txt")){
+        if(resource.endsWith(".txt")){
             return "text/plain";
         }
-        if(recurso.endsWith(".gif")){
+        if(resource.endsWith(".gif")){
             return "image/gif";
         }
-        if(recurso.endsWith(".png")){
+        if(resource.endsWith(".png")){
             return "image/png";
         }
         return "Sin tipo";
     }
 
-    public String getultimaModificacion(String recurso) {
-        File archivo = new File(recurso);
-        long fechaMs = archivo.lastModified();
-        Date fecha = new Date(fechaMs);
-        return fecha.toString();
+    public String getLastModification(String resource) {
+        File file = new File(resource);
+        long fechaMs = file.lastModified();
+        Date date = new Date(fechaMs);
+        return date.toString();
     }
 }

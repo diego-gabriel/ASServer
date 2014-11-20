@@ -1,71 +1,57 @@
 package http;
 
 
-import resourceManager.ResourceManager;
-import java.util.Date;
-
-
-
-/**
- *
- * @author Alison Fernandez
- */
 public class HttpHeader {
     
-    private int estado; 
-    private String fecha; 
-    private final String servidor;
-    private String tipoContenido;
+    private final int status; 
+    private final String protocolVersion;
+    private final String statusMessage;
+    private final HttpGeneralHeader generalHeader;
+    private final HttpResponseHeader responseHeader;
+    private final HttpEntityHeader entityHeader;
 
-    public HttpHeader(int estadoPeticion, String recurso){
-        estado = estadoPeticion;
-        servidor = "Apachurrito";
-        setFecha();
-        setTipo(recurso);
+    public HttpHeader(int requestStatus, String resource, String protocol){
+        status = requestStatus;
+        statusMessage = "someStatus";
+        protocolVersion = protocol;
+        generalHeader = new HttpGeneralHeader();
+        responseHeader = new HttpResponseHeader();
+        entityHeader = new HttpEntityHeader(resource);
     }
     
-    public HttpHeader(int status){
-        //implementar
-        servidor = null;
-        fecha = null;
-        tipoContenido = null;
+    public HttpHeader(int requestStatus, String protocol){
+        status = requestStatus;
+        statusMessage = "someStatus";
+        protocolVersion = protocol;
+        generalHeader = new HttpGeneralHeader();
+        responseHeader = new HttpResponseHeader();
+        entityHeader = null;
     }
     
-    private void setFecha(){
-        Date d = new Date();
-        fecha = d.toString();  
+    public int getStatus(){
+        return status;
     }
     
-    private void setTipo(String recurso){
-        ResourceManager manejador = new ResourceManager();
-        tipoContenido = manejador.getTipo(recurso);
-    }
-    
-    public int getEstado(){
-        return estado;
-    }
-    
-    public String getFecha(){
-        return fecha;
-    }
-    
-    public String getTipoContenido(){
-        return tipoContenido;
-    }
     
     @Override
-    public boolean equals(Object otro){
-        boolean respuesta = false;
-        if(otro instanceof HttpHeader)
+    public boolean equals(Object other){
+        boolean response = false;
+        if(other instanceof HttpHeader)
         {
-            HttpHeader otherHeader = (HttpHeader)otro;
+            
+            HttpHeader otherHeader = (HttpHeader)other;
 
-            respuesta =  estado == (otherHeader.estado) && 
-               fecha.equals(otherHeader.fecha) && 
-               tipoContenido.equals(otherHeader.tipoContenido);
+            
+
+            response = status == otherHeader.status && protocolVersion.equals(otherHeader.protocolVersion)
+                       && generalHeader.equals(otherHeader.generalHeader) 
+                       && responseHeader.equals(otherHeader.responseHeader)
+                       && ((entityHeader == null && otherHeader.entityHeader == null) 
+                       || (entityHeader != null && otherHeader.entityHeader != null
+                       && entityHeader.equals(otherHeader.entityHeader)));
         }
         
-        return respuesta;
+        return response;
     }
     
 }

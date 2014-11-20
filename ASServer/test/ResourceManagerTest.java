@@ -20,14 +20,14 @@ public class ResourceManagerTest {
     @Test
     public void testRecursoExistente() {
         ResourceManager manejador = new ResourceManager();
-        boolean respuestaCalculada = manejador.existe("archivos/index.html");
+        boolean respuestaCalculada = manejador.existe("root/index.html");
         assertTrue(respuestaCalculada);
     }
     
     @Test
     public void testRecursoNoExistente() {
         ResourceManager manejador = new ResourceManager();
-        boolean respuestaCalculada = manejador.existe("archivos/lala.html");
+        boolean respuestaCalculada = manejador.existe("root/lala.html");
         assertFalse(respuestaCalculada);
     }
     

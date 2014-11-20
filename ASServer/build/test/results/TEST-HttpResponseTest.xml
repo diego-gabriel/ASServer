@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="HttpResponseTest" skipped="0" tests="4" time="0.687" timestamp="2014-11-20T03:41:59">
+<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="HttpResponseTest" skipped="0" tests="4" time="0.608" timestamp="2014-11-20T09:29:55">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="BO" />
@@ -59,7 +59,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HttpResponseTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-HttpResponseTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher16616420023142552.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit6279621356496068150.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HttpResponseTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-HttpResponseTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher1287091556183991355.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit7523435779094459957.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -111,6 +111,7 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="C:\Program Files (x86)\NetBeans 8.0\ide\docs\jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files (x86)\NetBeans 8.0\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
+    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="ant.home" value="C:\Program Files (x86)\NetBeans 8.0\extide\ant" />
     <property name="libs.junit_4.src" value="C:\Users\Diego Gabriel\AppData\Roaming\NetBeans\8.0\docs\junit-4.10-sources.jar" />
     <property name="libs.testng.classpath" value="C:\Program Files (x86)\NetBeans 8.0\platform\modules\ext\testng-6.8.1-dist.jar" />
@@ -240,7 +241,6 @@
     <property name="libs.DataBindingME-SVG.src" value="C:\Program Files (x86)\NetBeans 8.0\mobility\sources\netbeans_databindingme_svg-src.zip" />
     <property name="dist.jar" value="dist/SevidorWeb.jar" />
     <property name="libs.spring-framework400.maven-pom" value="" />
-    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="SevidorWeb" />
     <property name="netbeans.hash.code" value="unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0911d8eb2-70f7-4451-9e4f-a58d53f1a2f8_c43df2be-6419-40c1-8f27-28e2ecd10827" />
@@ -394,10 +394,10 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files (x86)\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="HttpResponseTest" name="testRespuestasIgualesCabeceraOK" time="0.032" />
-  <testcase classname="HttpResponseTest" name="testRespuestasDiferentesCabecera" time="0.0" />
-  <testcase classname="HttpResponseTest" name="testRespuestasIgualesCabecera" time="0.001" />
-  <testcase classname="HttpResponseTest" name="testRespuestasDiferentesCabeceraOK" time="0.002" />
+  <testcase classname="HttpResponseTest" name="testRespuestasDiferentesCabecera" time="0.031" />
+  <testcase classname="HttpResponseTest" name="testRespuestasIgualesCabecera" time="0.046" />
+  <testcase classname="HttpResponseTest" name="testRespuestasIgualesCabeceraOK" time="0.016" />
+  <testcase classname="HttpResponseTest" name="testRespuestasDiferentesCabeceraOK" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

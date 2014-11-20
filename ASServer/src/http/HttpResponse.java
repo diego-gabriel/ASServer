@@ -7,25 +7,26 @@ package http;
  */
 public class HttpResponse {
     
-    private Object cabeza;
+    private final HttpHeader header;
     
-    public HttpResponse(int estado, String recurso){
-        cabeza = new HttpHeader(estado, recurso);
+    public HttpResponse(int status, String method, String protocolVersion){
+        header = new HttpHeader(status, protocolVersion);
     }
 
-    public HttpResponse(int estadoPeticion, String recurso, String metodo) {
-        cabeza = new CabeceraOK(estadoPeticion, metodo, recurso);
+    public HttpResponse(int status, String resource, String method, String protocolVersion) {
+        
+        header = new HttpHeader(status, resource, protocolVersion);
     }
     
     @Override
-    public boolean equals(Object otraRespuesta){
-        boolean respuesta = false;
-        if(otraRespuesta instanceof HttpResponse)
+    public boolean equals(Object anotherRersponse){
+        boolean response = false;
+        if(anotherRersponse instanceof HttpResponse)
         {
-            Object cabezaOtro = ((HttpResponse)otraRespuesta).cabeza;
-            respuesta = cabezaOtro.equals(cabeza);
+            Object anotherHeader = ((HttpResponse)anotherRersponse).header;
+            response = anotherHeader.equals(header);
         }
         
-        return respuesta;
+        return response;
     }
 }

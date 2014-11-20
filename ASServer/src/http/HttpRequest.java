@@ -7,26 +7,26 @@ package http;
  */
 public class HttpRequest {
     
-    private String metodo;
-    private String recurso;
+    private String method;
+    private String resource;
     private String version;
     private String DEFAULT_VALUE = "/index.html";
     
-    public HttpRequest(String metodo, String recurso, String version){
-        this.metodo = metodo;
-        if(recurso.equals("/")){
-            recurso = DEFAULT_VALUE;
+    public HttpRequest(String method, String resource, String version){
+        this.method = method;
+        if(resource.equals("/")){
+            resource = DEFAULT_VALUE;
         }
-        this.recurso = recurso;
+        this.resource = resource;
         this.version = version;
     }
 
-    public String getMetodo() {
-        return metodo;
+    public String getMethod() {
+        return method;
     }
 
-    public String getRecurso() {
-        return recurso;
+    public String getResource() {
+        return resource;
     }
 
     public String getVersion() {

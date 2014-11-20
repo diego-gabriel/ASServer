@@ -23,8 +23,7 @@ public class HeaderTest {
     public void testCabecerasIguales() {
         HttpHeader cabecera1 = new HttpHeader(404, "/lala.html");
         HttpHeader cabecera2 = new HttpHeader(404, "/lala.html");
-        boolean respuestaCalculada = cabecera1.equals(cabecera2);
-        assertTrue(respuestaCalculada);
+        assertEquals(cabecera1, cabecera2);
     }
     
     @Test

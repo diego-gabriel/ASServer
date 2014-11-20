@@ -12,18 +12,18 @@ import http.HttpResponse;
  */
 public class Server {
     
+    public static final String SERVER_NAME = "Apachurrito";
     private String DEFAULT_RAIZ = "root";
     
-    public HttpResponse getRespuesta(HttpRequest peticion){
-        HttpResponse respuesta;
+    public HttpResponse getRespuesta(HttpRequest request){
+        HttpResponse response;
         HttpRequestValidator validador = new HttpRequestValidator(DEFAULT_RAIZ);
-        int estadoPeticion = validador.getEstado(peticion);
+        int estadoPeticion = validador.getStatus(request);
         if(estadoPeticion == 200)
-            respuesta = new HttpResponse(estadoPeticion, DEFAULT_RAIZ + peticion.getRecurso(), peticion.getMetodo());
+            response = new HttpResponse(estadoPeticion, DEFAULT_RAIZ + request.getResource(), request.getMethod(), request.getVersion());
         else
-            respuesta = new HttpResponse(estadoPeticion, peticion.getRecurso());
-        
-        return respuesta;
+            response = new HttpResponse(estadoPeticion, request.getMethod(), request.getVersion());        
+        return response;
     }
     
 }

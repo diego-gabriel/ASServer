@@ -10,37 +10,37 @@ import resourceManager.ResourceManager;
  */
 public class HttpRequestValidator {
     
-    private String metodos[] = {"HEAD", "GET", "POST"};
-    private String ruta;
+    private String methods[] = {"HEAD", "GET", "POST"};
+    private String path;
     
-    public HttpRequestValidator(String ruta){
-        this.ruta = ruta;
+    public HttpRequestValidator(String path){
+        this.path = path;
     }
     
-    public int getEstado(HttpRequest peticion){
-        String metodo, recurso, version;
-        metodo = peticion.getMetodo();
-        recurso = peticion.getRecurso();
+    public int getStatus(HttpRequest peticion){
+        String method, resource, version;
+        method = peticion.getMethod();
+        resource = peticion.getResource();
         version = peticion.getVersion();
         
-        ResourceManager controlador = new ResourceManager();
+        ResourceManager controller = new ResourceManager();
         
-        if(!metodoImplementado(metodo))
+        if(!implementedMethod(method))
             return 501;
-        if(recurso.isEmpty())
+        if(resource.isEmpty())
             return 400;
         if(!version.equals("HTTP/1.0"))
             return 505;
-        if(controlador.existe(ruta + recurso))
+        if(controller.existe(path + resource))
             return 200;
         else
             return 404;
     }
 
-    private boolean metodoImplementado(String metodo) {
+    private boolean implementedMethod(String metodo) {
         int metodoDefinido = 0;
-        while(metodoDefinido < metodos.length){
-            if(metodos[metodoDefinido].equals(metodo))
+        while(metodoDefinido < methods.length){
+            if(methods[metodoDefinido].equals(metodo))
                 return true;
             metodoDefinido++;
         }

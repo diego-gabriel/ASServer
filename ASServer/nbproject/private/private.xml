@@ -3,14 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/src/ValidadorPeticion.java</file>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/test/ServidorTest.java</file>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/src/RespuestaHttp.java</file>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/src/Cabecera.java</file>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/test/CabeceraOKTest.java</file>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/src/CabeceraOK.java</file>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/src/ManejadorArchivo.java</file>
-            <file>file:/C:/Users/Veymar%20Montaño%20Colqu/Documents/GitHub/ASServer/ASServer/archivos/diferente.html</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpGeneralHeader.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpEntityHeader.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/test/HttpResponseTest.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/webServer/Server.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpResponse.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpHeader.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpRequest.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/test/ValidadorPeticionTest.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/test/CabeceraOKTest.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HeaderOk.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/test/ResourceManagerTest.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpRequestValidator.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpResponseHeader.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/test/ServerTest.java</file>
         </group>
     </open-files>
 </project-private>
