@@ -17,16 +17,12 @@ public class HttpResponse {
         cabeza = new CabeceraOK(estadoPeticion, metodo, recurso);
     }
     
-    private Object getCabeza(){
-        return cabeza;
-    }
-    
     @Override
     public boolean equals(Object otraRespuesta){
         boolean respuesta = false;
         if(otraRespuesta instanceof HttpResponse)
         {
-            Object cabezaOtro = ((HttpResponse)otraRespuesta).getCabeza();
+            Object cabezaOtro = ((HttpResponse)otraRespuesta).cabeza;
             respuesta = cabezaOtro.equals(cabeza);
         }
         

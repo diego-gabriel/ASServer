@@ -3,12 +3,6 @@ package http;
 
 import resourceManager.ResourceManager;
 
-
-
-/**
- *
- * @author Alison Fernandez
- */
 public class CabeceraOK{
     
     private HttpHeader cabezaDefecto;
@@ -35,8 +29,6 @@ public class CabeceraOK{
             answer =   cabezaDefecto.equals(otro.cabezaDefecto) && 
                     metodo.equals(otro.metodo) &&
                     ultimaModificacion.equals(otro.ultimaModificacion);
-            System.out.println(ultimaModificacion + " -> " + otro.ultimaModificacion);
-            System.out.println(metodo + " -> " + otro.metodo);
         }
         return answer;
     }

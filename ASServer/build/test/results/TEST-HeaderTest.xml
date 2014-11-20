@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="HeaderTest" skipped="0" tests="2" time="1.139" timestamp="2014-11-19T00:51:31">
+<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="HeaderTest" skipped="0" tests="2" time="0.803" timestamp="2014-11-20T03:41:56">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="BO" />
@@ -59,7 +59,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HeaderTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-HeaderTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher5359749654587989903.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit1819320091696197742.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HeaderTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-HeaderTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher3637483425006872302.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit326983363824687706.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -222,7 +222,6 @@
     <property name="org.openide.major.version" value="IDE/1" />
     <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
     <property name="netbeans.user" value="C:\Users\Diego Gabriel\AppData\Roaming\NetBeans\8.0" />
-    <property name="tests.failed" value="true" />
     <property name="javadoc.additionalparam" value="" />
     <property name="java.io.tmpdir" value="C:\Users\DIEGOG~1\AppData\Local\Temp\" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
@@ -241,6 +240,7 @@
     <property name="libs.DataBindingME-SVG.src" value="C:\Program Files (x86)\NetBeans 8.0\mobility\sources\netbeans_databindingme_svg-src.zip" />
     <property name="dist.jar" value="dist/SevidorWeb.jar" />
     <property name="libs.spring-framework400.maven-pom" value="" />
+    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="SevidorWeb" />
     <property name="netbeans.hash.code" value="unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0911d8eb2-70f7-4451-9e4f-a58d53f1a2f8_c43df2be-6419-40c1-8f27-28e2ecd10827" />
@@ -296,7 +296,7 @@
     <property name="build.generated.dir" value="build/generated" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="java.specification.version" value="1.8" />
-    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="java.vm.info" value="mixed mode" />
     <property name="libs.jaxws21.maven-pom" value="" />
     <property name="nb.junit.batch" value="true" />
     <property name="junit.forkmode" value="perTest" />
@@ -394,14 +394,8 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files (x86)\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="HeaderTest" name="testCabecerasIguales" time="0.031" />
-  <testcase classname="HeaderTest" name="testCabecerasDiferentes" time="0.0" />
-  <system-out><![CDATA[404 -> 404
-Tue Nov 18 20:51:31 BOT 2014 -> Tue Nov 18 20:51:31 BOT 2014
-text/html -> text/html
-404 -> 400
-Tue Nov 18 20:51:31 BOT 2014 -> Tue Nov 18 20:51:31 BOT 2014
-text/html -> Sin tipo
-]]></system-out>
+  <testcase classname="HeaderTest" name="testCabecerasDiferentes" time="0.087" />
+  <testcase classname="HeaderTest" name="testCabecerasIguales" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

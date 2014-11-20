@@ -59,9 +59,6 @@ public class HttpHeader {
         if(otro instanceof HttpHeader)
         {
             HttpHeader otherHeader = (HttpHeader)otro;
-            System.out.println(estado + " -> " + otherHeader.estado);
-            System.out.println(fecha + " -> " + otherHeader.fecha);
-            System.out.println(tipoContenido + " -> " + otherHeader.tipoContenido);
 
             respuesta =  estado == (otherHeader.estado) && 
                fecha.equals(otherHeader.fecha) && 
