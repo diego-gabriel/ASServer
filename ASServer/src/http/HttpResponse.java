@@ -8,22 +8,24 @@ package http;
 public class HttpResponse {
     
     private final HttpHeader header;
-    
+    //Constructor de HttpResponse cuando ocurre un error
     public HttpResponse(int status, String method, String protocolVersion){
         header = new HttpHeader(status, protocolVersion);
     }
-
+    
+    //Constructor cuando el status es exitoso
     public HttpResponse(int status, String resource, String method, String protocolVersion) {
         
         header = new HttpHeader(status, resource, protocolVersion);
     }
     
     @Override
-    public boolean equals(Object anotherRersponse){
+    public boolean equals(Object anotherResponse){
         boolean response = false;
-        if(anotherRersponse instanceof HttpResponse)
+        
+        if(anotherResponse instanceof HttpResponse)
         {
-            Object anotherHeader = ((HttpResponse)anotherRersponse).header;
+            HttpHeader anotherHeader = ((HttpResponse)anotherResponse).header;
             response = anotherHeader.equals(header);
         }
         

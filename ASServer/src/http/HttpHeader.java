@@ -41,8 +41,6 @@ public class HttpHeader {
             
             HttpHeader otherHeader = (HttpHeader)other;
 
-            
-
             response = status == otherHeader.status && protocolVersion.equals(otherHeader.protocolVersion)
                        && generalHeader.equals(otherHeader.generalHeader) 
                        && responseHeader.equals(otherHeader.responseHeader)
