@@ -46,4 +46,9 @@ public class ResourceManager {
         Date date = new Date(fechaMs);
         return date.toString();
     }
+    
+    public File getResourceFor(int httpStatus){
+        String pathToResource = "root/errorFile/" + httpStatus + ".html";
+        return new File(pathToResource);
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="ResourceManagerTest" skipped="0" tests="2" time="0.296" timestamp="2014-11-20T15:32:24">
+<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="ResourceManagerTest" skipped="0" tests="5" time="0.366" timestamp="2014-11-25T20:26:39">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="BO" />
@@ -59,7 +59,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ResourceManagerTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-ResourceManagerTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher5235366930429270503.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit7700558306506659032.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ResourceManagerTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-ResourceManagerTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher8629551089938100260.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit6278295753898793226.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -393,8 +393,11 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files (x86)\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="ResourceManagerTest" name="testRecursoExistente" time="0.015" />
-  <testcase classname="ResourceManagerTest" name="testRecursoNoExistente" time="0.0" />
+  <testcase classname="ResourceManagerTest" name="testRecursoExistente" time="0.03" />
+  <testcase classname="ResourceManagerTest" name="testGetResourceFor_Fail" time="0.0" />
+  <testcase classname="ResourceManagerTest" name="testRecursoNoExistente" time="0.002" />
+  <testcase classname="ResourceManagerTest" name="testGetResourceFor_400Succedd" time="0.001" />
+  <testcase classname="ResourceManagerTest" name="testGetResourceFor_404Succedd" time="0.001" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

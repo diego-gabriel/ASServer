@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="ServerTest" skipped="0" tests="4" time="0.328" timestamp="2014-11-20T15:32:26">
+<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="ServerTest" skipped="0" tests="4" time="0.463" timestamp="2014-11-25T20:26:41">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="BO" />
@@ -59,7 +59,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ServerTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-ServerTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher7402559620792218149.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit2335920508350458947.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ServerTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-ServerTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher4441026169491138628.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit7478752492045975463.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -393,10 +393,10 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files (x86)\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="ServerTest" name="testParametrosVacios" time="0.031" />
-  <testcase classname="ServerTest" name="testEstado200" time="0.0" />
-  <testcase classname="ServerTest" name="testEstado404" time="0.0" />
-  <testcase classname="ServerTest" name="testEstado400" time="0.0" />
+  <testcase classname="ServerTest" name="testParametrosVacios" time="0.042" />
+  <testcase classname="ServerTest" name="testEstado200" time="0.004" />
+  <testcase classname="ServerTest" name="testEstado404" time="0.002" />
+  <testcase classname="ServerTest" name="testEstado400" time="0.001" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

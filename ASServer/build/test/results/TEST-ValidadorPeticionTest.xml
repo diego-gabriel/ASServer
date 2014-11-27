@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="ValidadorPeticionTest" skipped="0" tests="12" time="0.406" timestamp="2014-11-20T15:32:28">
+<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="ValidadorPeticionTest" skipped="0" tests="12" time="0.626" timestamp="2014-11-25T20:26:43">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="BO" />
@@ -59,7 +59,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ValidadorPeticionTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-ValidadorPeticionTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher2274507390899242008.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit3783346489096926372.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ValidadorPeticionTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-ValidadorPeticionTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher2245318172351068792.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit4586170789222903586.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -393,17 +393,17 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files (x86)\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="ValidadorPeticionTest" name="testEstadoMetodoGetErrorNoExistePath4" time="0.016" />
+  <testcase classname="ValidadorPeticionTest" name="testEstadoMetodoGetErrorNoExistePath4" time="0.06" />
   <testcase classname="ValidadorPeticionTest" name="testHeadRecursoPorDefecto" time="0.0" />
   <testcase classname="ValidadorPeticionTest" name="testMetodoNoImplementado" time="0.0" />
-  <testcase classname="ValidadorPeticionTest" name="testHeadSinRecurso" time="0.0" />
-  <testcase classname="ValidadorPeticionTest" name="testHeadRecursoIndex" time="0.0" />
-  <testcase classname="ValidadorPeticionTest" name="testPeticionVacia" time="0.0" />
+  <testcase classname="ValidadorPeticionTest" name="testHeadSinRecurso" time="0.001" />
+  <testcase classname="ValidadorPeticionTest" name="testHeadRecursoIndex" time="0.001" />
+  <testcase classname="ValidadorPeticionTest" name="testPeticionVacia" time="0.001" />
   <testcase classname="ValidadorPeticionTest" name="testHeadVersionDistinta" time="0.0" />
-  <testcase classname="ValidadorPeticionTest" name="testHeadRecursoNoExiste" time="0.0" />
-  <testcase classname="ValidadorPeticionTest" name="testGetRecursoPorDefecto" time="0.0" />
-  <testcase classname="ValidadorPeticionTest" name="testGetRecursoIndex" time="0.0" />
-  <testcase classname="ValidadorPeticionTest" name="testGetRecursoVacio" time="0.0" />
+  <testcase classname="ValidadorPeticionTest" name="testHeadRecursoNoExiste" time="0.001" />
+  <testcase classname="ValidadorPeticionTest" name="testGetRecursoPorDefecto" time="0.001" />
+  <testcase classname="ValidadorPeticionTest" name="testGetRecursoIndex" time="0.001" />
+  <testcase classname="ValidadorPeticionTest" name="testGetRecursoVacio" time="0.001" />
   <testcase classname="ValidadorPeticionTest" name="testGetVersionDistinta" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

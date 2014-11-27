@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import java.io.File;
 import resourceManager.ResourceManager;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -31,4 +32,27 @@ public class ResourceManagerTest {
         assertFalse(respuestaCalculada);
     }
     
+    @Test
+    public void testGetResourceFor_400Succedd(){
+        File expectedResult = new File("root/errorFile/400.html");
+        ResourceManager manager = new ResourceManager();
+        File result = manager.getResourceFor(400);
+        assertEquals(expectedResult, result);
+    }
+    @Test
+    public void testGetResourceFor_404Succedd(){
+        File expectedResult = new File("root/errorFile/404.html");
+        ResourceManager manager = new ResourceManager();
+        File result = manager.getResourceFor(404);
+        assertEquals(expectedResult, result);
+    }
+    
+    
+    @Test
+    public void testGetResourceFor_Fail(){
+        File expectedResult = new File("root/errorFile/100.html");
+        ResourceManager manager = new ResourceManager();
+        File result = manager.getResourceFor(100);
+        assertEquals(expectedResult, result);
+    }
 }

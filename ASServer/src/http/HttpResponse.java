@@ -1,5 +1,8 @@
 package http;
 
+import java.io.File;
+
+import resourceManager.ResourceManager;
 
 /**
  *
@@ -8,9 +11,12 @@ package http;
 public class HttpResponse {
     
     private final HttpHeader header;
+    private File resource;
     //Constructor de HttpResponse cuando ocurre un error
     public HttpResponse(int status, String method, String protocolVersion){
         header = new HttpHeader(status, protocolVersion);
+        ResourceManager manager = new ResourceManager();
+        resource = manager.getResourceFor(status);
     }
     
     //Constructor cuando el status es exitoso
