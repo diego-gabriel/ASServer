@@ -23,7 +23,7 @@ public class HttpRequestValidator {
         resource = peticion.getResource();
         version = peticion.getVersion();
         
-        ResourceManager controller = new ResourceManager();
+        ResourceManager manager = new ResourceManager();
         
         if(!implementedMethod(method))
             return 501;
@@ -31,7 +31,7 @@ public class HttpRequestValidator {
             return 400;
         if(!version.equals("HTTP/1.0"))
             return 505;
-        if(controller.existe(path + resource))
+        if(manager.existe(path + resource))
             return 200;
         else
             return 404;
