@@ -13,12 +13,9 @@ import java.util.Date;
 public class ResourceManager {
     
     public boolean existe(String resource){
-        try {
-            FileInputStream file = new FileInputStream(resource);
-            return  true;
-        } catch (FileNotFoundException ex) {
-            return  false;
-        }
+        
+        File file = new File(completeExtension(resource));
+        return file.exists();
     }
 
     public String getType(String resource) {
@@ -51,4 +48,20 @@ public class ResourceManager {
         String pathToResource = "root/errorFile/" + httpStatus + ".html";
         return new File(pathToResource);
     }
+    
+    public File getResource(String resource){
+        return new File(resource);
+    }
+    
+    private String completeExtension(String path){
+        String completePath = path;
+        
+        if (!path.endsWith(".html"))
+            completePath = path + ".html";
+        
+        System.out.println(path + " -> " + completePath);
+        
+        return completePath;
+    }
+    
 }

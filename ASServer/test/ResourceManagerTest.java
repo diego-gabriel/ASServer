@@ -23,6 +23,11 @@ public class ResourceManagerTest {
         ResourceManager manejador = new ResourceManager();
         boolean respuestaCalculada = manejador.existe("root/index.html");
         assertTrue(respuestaCalculada);
+    }@Test
+    public void testRecursoExistenteSinExtension() {
+        ResourceManager manejador = new ResourceManager();
+        boolean respuestaCalculada = manejador.existe("root/index");
+        assertTrue(respuestaCalculada);
     }
     
     @Test
@@ -54,5 +59,19 @@ public class ResourceManagerTest {
         ResourceManager manager = new ResourceManager();
         File result = manager.getResourceFor(100);
         assertEquals(expectedResult, result);
+    }
+    
+    
+    @Test 
+    public void getResource_OK(){
+        File expectedResult = new File("root/index.html");
+        ResourceManager manager = new ResourceManager();
+        assertEquals(expectedResult, manager.getResource("root/index.html"));
+    }
+    @Test 
+    public void getResource_OK2(){
+        File expectedResult = new File("root/diferente.html");
+        ResourceManager manager = new ResourceManager();
+        assertEquals(expectedResult, manager.getResource("root/diferente.html"));
     }
 }
