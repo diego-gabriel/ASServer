@@ -10,8 +10,8 @@ import resourceManager.ResourceManager;
  */
 public class HttpRequestValidator {
     
-    private String methods[] = {"HEAD", "GET", "POST"};
-    private String path;
+    private final String methods[] = {"HEAD", "GET", "POST"};
+    private final String path;
     
     public HttpRequestValidator(String path){
         this.path = path;
