@@ -2,8 +2,8 @@ package resourceManager;
 
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.Date;
 
 /**
@@ -19,22 +19,16 @@ public class ResourceManager {
     }
 
     public String getType(String resource) {
-        if(resource.contains(".html")){
-            return "text/html";
+        File file = new File(resource);
+        String type = "application/octet-stream";
+        
+        try{
+          type = Files.probeContentType(file.toPath());
+        } catch (IOException e){
+            e.printStackTrace();
         }
-        if(resource.endsWith(".css")){
-            return "text/css";
-        }
-        if(resource.endsWith(".txt")){
-            return "text/plain";
-        }
-        if(resource.endsWith(".gif")){
-            return "image/gif";
-        }
-        if(resource.endsWith(".png")){
-            return "image/png";
-        }
-        return "Sin tipo";
+        
+        return type;
     }
 
     public String getLastModification(String resource) {
@@ -42,6 +36,15 @@ public class ResourceManager {
         long fechaMs = file.lastModified();
         Date date = new Date(fechaMs);
         return date.toString();
+    }
+    
+    public long getLength(String resource){
+        File file = new File (resource);
+        long length = 0;
+        if (file.exists()){
+            length = file.length();
+        }
+        return length;
     }
     
     public File getResourceFor(int httpStatus){
@@ -58,8 +61,6 @@ public class ResourceManager {
         
         if (!path.endsWith(".html"))
             completePath = path + ".html";
-        
-        System.out.println(path + " -> " + completePath);
         
         return completePath;
     }

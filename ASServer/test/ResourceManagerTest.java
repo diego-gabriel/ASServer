@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import java.io.File;
 import resourceManager.ResourceManager;
@@ -74,4 +69,40 @@ public class ResourceManagerTest {
         ResourceManager manager = new ResourceManager();
         assertEquals(expectedResult, manager.getResource("root/diferente.html"));
     }
+    
+    @Test 
+    public void getContentEncoding0(){
+        ResourceManager manager = new ResourceManager();
+        assertEquals(0, manager.getLength("root/no-existe.html"));
+    }
+    @Test 
+    public void getContentLength912(){
+        ResourceManager manager = new ResourceManager();
+        assertEquals(912, manager.getLength("root/errorFile/400.html"));
+    }
+    
+    @Test 
+    public void getContentEncoding274(){
+        ResourceManager manager = new ResourceManager();
+        assertEquals(274, manager.getLength("root/index.html"));
+    }
+    
+    @Test
+    public void getType(){
+        ResourceManager manager = new ResourceManager();
+        assertEquals("text/html", manager.getType("root/index.html"));
+    }
+    @Test
+    public void getTypeCss(){
+        ResourceManager manager = new ResourceManager();
+        assertEquals("text/css", manager.getType("root/some.css"));
+    }
+    
+    @Test
+    public void getTypePng(){
+        ResourceManager manager = new ResourceManager();
+        assertEquals("image/png", manager.getType("root/some.png"));
+    }
+    
+    
 }

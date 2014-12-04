@@ -14,17 +14,22 @@ import resourceManager.ResourceManager;
  */
 public class HttpEntityHeader {
     
+    
+    private final String contentLength;
     private final String contentType;
     private final String lastModified;
     
     public HttpEntityHeader(String resource){
         ResourceManager manager = new ResourceManager();
+        contentLength = "" + manager.getLength(resource);
         contentType = manager.getType(resource);
         lastModified = manager.getLastModification(resource);
+        
     }
     
     public boolean equals(HttpEntityHeader other){
         return contentType.equals(other.contentType)
-               && lastModified.equals(other.lastModified);
+               && lastModified.equals(other.lastModified)
+               && contentLength.equals(other.contentLength);
     }
 }
