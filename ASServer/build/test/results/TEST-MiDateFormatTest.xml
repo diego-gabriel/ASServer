@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DiegoGabriel-PC" name="HeaderTest" skipped="0" tests="2" time="0.411" timestamp="2014-12-10T23:09:09">
+<testsuite errors="0" failures="1" hostname="DiegoGabriel-PC" name="MiDateFormatTest" skipped="0" tests="1" time="0.546" timestamp="2014-12-10T23:09:13">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="BO" />
@@ -59,7 +59,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HeaderTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-HeaderTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher1949592936712019006.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit5636825120893024350.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner MiDateFormatTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\test\results\TEST-MiDateFormatTest.xml crashfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junitvmwatcher5328387559918148095.properties propsfile=C:\Users\Diego Gabriel\Documents\NetBeansProjects\ASServer\ASServer\build\junit7574969032593088937.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -394,8 +394,11 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files (x86)\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="HeaderTest" name="testCabecerasDiferentes" time="0.031" />
-  <testcase classname="HeaderTest" name="testCabecerasIguales" time="0.016" />
+  <testcase classname="MiDateFormatTest" name="testGetDateFormat" time="0.187">
+    <failure message="expected:&lt;[Thu, 04 Dec 2014 0:27:] GMT&gt; but was:&lt;[Wed, 10 Dec 2014 19:9:14] GMT&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;[Thu, 04 Dec 2014 0:27:] GMT&gt; but was:&lt;[Wed, 10 Dec 2014 19:9:14] GMT&gt;
+	at MiDateFormatTest.testGetDateFormat(MiDateFormatTest.java:15)
+</failure>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
