@@ -27,6 +27,13 @@ public class HttpEntityHeader {
         
     }
     
+    @Override
+    public String toString(){
+        return "Content-Length: " + contentLength + "\n"
+                + "Content-Type: " + contentType + "\n"
+                + "Last-Modified: " + lastModified;
+    }
+    
     public boolean equals(HttpEntityHeader other){
         return contentType.equals(other.contentType)
                && lastModified.equals(other.lastModified)

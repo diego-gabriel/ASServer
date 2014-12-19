@@ -29,7 +29,7 @@ public class HttpRequestValidator {
             return 501;
         if(resource.isEmpty())
             return 400;
-        if(!version.equals("HTTP/1.0"))
+        if(!version.equals("HTTP/1.1"))
             return 505;
         if(manager.existe(path + resource))
             return 200;

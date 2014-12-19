@@ -1,6 +1,8 @@
 package http;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 import resourceManager.ResourceManager;
 
@@ -11,7 +13,7 @@ import resourceManager.ResourceManager;
 public class HttpResponse {
     
     private final HttpHeader header;
-    private File resource;
+    private final File resource;
     //Constructor de HttpResponse cuando ocurre un error
     public HttpResponse(int status, String method, String protocolVersion){
         header = new HttpHeader(status, protocolVersion);
@@ -46,5 +48,17 @@ public class HttpResponse {
         }
         
         return response;
+    }
+    
+    @Override
+    public String toString(){
+        String headerStr = this.header.toString();
+        String content = "";
+        try {
+            content = new Scanner(resource).useDelimiter("\\Z").next();
+        } catch (FileNotFoundException ex) {
+        }
+        
+        return headerStr + "\n\n"+ content;
     }
 }

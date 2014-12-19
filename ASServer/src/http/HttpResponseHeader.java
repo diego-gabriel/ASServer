@@ -10,13 +10,17 @@ import webServer.Server;
  */
 public class HttpResponseHeader {
     private final String server;
-    private MiDateFormat date;
     private String location; //Location: http://www.w3.org/hypertext/WWW/NewLocation.html
-    private Statusline statusLine;//"HTTP/" 1*DIGIT "." 1*DIGIT SP 3DIGIT SP
     
                     
     public HttpResponseHeader(){
         server = Server.SERVER_NAME;
+    }
+    
+    @Override
+    public String toString(){
+        return "Location: " + location + "\n"
+                + "Server: " + server;
     }
       
     public boolean equals(HttpResponseHeader other){

@@ -1,17 +1,19 @@
 
 package http;
 
-import java.time.Instant;
-import java.util.Date;
-
-
 public class HttpGeneralHeader {
     private final String date;
     
     public HttpGeneralHeader(){
-        Date now = new Date();
-        date = now.toString();
+        MiDateFormat now = new MiDateFormat();
+        date = now.getDateFormat();
     }
+    
+    @Override
+    public String toString(){
+        return "Date: " + date;
+    }
+    
     
     public boolean equals(HttpGeneralHeader other){
         return date.equals(other.date);
