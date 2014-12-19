@@ -37,7 +37,7 @@ public class HttpRequestTest {
         "Host: www.test101.com\n" +
         "Accept: image/gif, image/jpeg, */*\n" +
         "Accept-Language: en-us\n" +
-        "Accept-Encoding: gzip, deflate\n" +
+        "Accept-Encoding: gzip, deflate\n" + 
         "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)\n" +
         "";
         
