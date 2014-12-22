@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpResponse.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/test/ValidadorPeticionTest.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/serverSocket/ServerSocket.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/resourceManager/ResourceManager.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpEntityHeader.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/webServer/Server.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpHeader.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/src/http/HttpRequestValidator.java</file>
+            <file>file:/C:/Users/Diego%20Gabriel/Documents/NetBeansProjects/ASServer/ASServer/test/ServerTest.java</file>
         </group>
     </open-files>
 </project-private>

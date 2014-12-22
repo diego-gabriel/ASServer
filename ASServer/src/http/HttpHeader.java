@@ -36,8 +36,8 @@ public class HttpHeader {
         MiDateFormat date = new MiDateFormat();
         return protocolVersion + " " + statusline.getStatusLine(status) + "\n"
                 + generalHeader.toString() + "\n"
-                + responseHeader.toString()
-                + (entityHeader != null ?  ("\n" + entityHeader.toString()) : "");
+                + responseHeader.toString() + "\n"
+                + entityHeader.toString();
     }
     
     

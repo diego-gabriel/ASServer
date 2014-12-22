@@ -37,19 +37,28 @@ public class ServerTest {
     
     @Test
     public void testEstado404() {
-        HttpRequest peticion = new HttpRequest("HEAD", "/lala.html", "HTTP/1.0");
+        HttpRequest peticion = new HttpRequest("HEAD", "/lala.html", "HTTP/1.1");
         Server servidor = new Server();
         HttpResponse respuestaCalculada = servidor.getRespuesta(peticion);
-        HttpResponse respuestaEsperada = new HttpResponse(404, "HEAD", "HTTP/1.0");
+        HttpResponse respuestaEsperada = new HttpResponse(404, "HEAD", "HTTP/1.1");
         assertEquals(respuestaEsperada, respuestaCalculada);
     }
     
     @Test
     public void testEstado200() {
-        HttpRequest peticion = new HttpRequest("GET", "/", "HTTP/1.0");
+        HttpRequest peticion = new HttpRequest("GET", "/", "HTTP/1.1");
         Server servidor = new Server();
         HttpResponse respuestaCalculada = servidor.getRespuesta(peticion);
-        HttpResponse respuestaEsperada = new HttpResponse(200, "root/index.html", "GET", "HTTP/1.0");
+        HttpResponse respuestaEsperada = new HttpResponse(200, "root/index.html", "GET", "HTTP/1.1");
+        assertEquals(respuestaEsperada, respuestaCalculada);
+    }
+    
+    @Test
+    public void testEstado505() {
+        HttpRequest peticion = new HttpRequest("GAT", "/", "HTTP/1.1");
+        Server servidor = new Server();
+        HttpResponse respuestaCalculada = servidor.getRespuesta(peticion);
+        HttpResponse respuestaEsperada = new HttpResponse(501, "GAT", "HTTP/1.1");
         assertEquals(respuestaEsperada, respuestaCalculada);
     }
   

@@ -13,27 +13,26 @@ import resourceManager.ResourceManager;
 public class HttpResponse {
     
     private final HttpHeader header;
-    private final File resource;
+    private File resource;
     //Constructor de HttpResponse cuando ocurre un error
     public HttpResponse(int status, String method, String protocolVersion){
-        header = new HttpHeader(status, protocolVersion);
-        if (!method.equals("HEAD")){
-            ResourceManager manager = new ResourceManager();
-            resource = manager.getResourceFor(status);
-        }
-        else
+        ResourceManager manager = new ResourceManager();
+        File res = manager.getResourceFor(status);
+        header = new HttpHeader(status, res.getPath(), protocolVersion);
+        if (method.equals("HEAD"))
             resource = null;
+        else 
+            resource = res;
+        
     }
     
     //Constructor cuando el status es exitoso
     public HttpResponse(int status, String resource, String method, String protocolVersion) {
         
+        ResourceManager manager = new ResourceManager();
+        this.resource = manager.getResource(resource);
         header = new HttpHeader(status, resource, protocolVersion);
-        if (!method.equals("HEAD")){
-            ResourceManager manager = new ResourceManager();
-            this.resource = manager.getResource(resource);
-        }
-        else
+        if (method.equals("HEAD"))
             this.resource = null;
     }
     
@@ -54,11 +53,18 @@ public class HttpResponse {
     public String toString(){
         String headerStr = this.header.toString();
         String content = "";
-        try {
-            content = new Scanner(resource).useDelimiter("\\Z").next();
-        } catch (FileNotFoundException ex) {
+        String response = "";
+        if (resource != null){
+           
+            try {
+                content = new Scanner(resource).useDelimiter("\\Z").next();
+            } catch (FileNotFoundException ex) {
+            }
+            response = headerStr + "\n\n" + content;
         }
-        
-        return headerStr + "\n\n"+ content;
+        else
+            response = headerStr;
+            
+        return response;
     }
 }
