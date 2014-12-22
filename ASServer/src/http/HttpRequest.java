@@ -10,6 +10,7 @@ public class HttpRequest {
     private String method;
     private String resource;
     private String version;
+    private String params;
     private String DEFAULT_VALUE = "/index.html";
     
     public HttpRequest(String clientRequest){
@@ -18,6 +19,16 @@ public class HttpRequest {
         this.method = requestLine[0];
         this.resource = normalizeResource(requestLine[1]);
         this.version = requestLine[2];
+        
+        if (method.equals("POST")){
+            String[] requestParts = clientRequest.split("\n\n");
+            if (requestParts.length >= 2)
+                params = requestParts[1];
+            else 
+                params = "";
+        }
+        else
+            params = "";
     }
     
     public HttpRequest(String method, String resource, String version){
@@ -47,6 +58,10 @@ public class HttpRequest {
         return version;
     }
     
+    public String getParams(){
+        return params;
+    }
+    
     @Override
     public boolean equals(Object anObject){
         if (anObject instanceof HttpRequest){
@@ -54,7 +69,8 @@ public class HttpRequest {
             
             return method.equals(aRequest.method) &&
                    resource.equals(aRequest.resource) &&
-                   version.equals(aRequest.version);
+                   version.equals(aRequest.version) &&
+                   params.equals(aRequest.params);
         }
         
         return false;

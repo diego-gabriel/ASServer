@@ -5,7 +5,11 @@
  */
 
 package http;
-;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -14,36 +18,35 @@ import static org.junit.Assert.*;
  * @author Diego Gabriel
  */
 public class HttpRequestTest {
-    @Test 
-    public void HttpRequestConstruction(){
-        String clientRequest = "GET /docs/index.html HTTP/1.0\n" +
-        "Host: www.test101.com\n" +
-        "Accept: image/gif, image/jpeg, */*\n" +
-        "Accept-Language: en-us\n" +
-        "Accept-Encoding: gzip, deflate\n" +
-        "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)\n" +
-        "";
-        
-        HttpRequest constructedRequest = new HttpRequest(clientRequest);
-        HttpRequest expectedRequest = new HttpRequest("GET", "/docs/index.html", "HTTP/1.0");
-        
-        assertEquals(expectedRequest, constructedRequest);
+    @Test
+    public void testParamsConstructionPOST(){
+        String request = "POST /index.html HTTP/1.1\n" +
+                        "Content-Length: 18\n" +
+                        "\n" +
+                        "uno=A&dos=B&tres=C";
+        HttpRequest instance = new HttpRequest(request);
+        assertEquals("uno=A&dos=B&tres=C", instance.getParams());
+    }
+    @Test
+    public void testParamsConstructionPOST2(){
+        String request = "POST /index.html HTTP/1.1\n" +
+                        "Content-Length: 18\n" +
+                        "\n" +
+                        "uno=A&dos=B&tres=D";
+        HttpRequest instance = new HttpRequest(request);
+        assertEquals("uno=A&dos=B&tres=D", instance.getParams());
     }
     
-    
-    @Test 
-    public void HttpRequestConstruction2(){
-        String clientRequest = "POST /docs/index.html HTTP/1.0\n" +
-        "Host: www.test101.com\n" +
-        "Accept: image/gif, image/jpeg, */*\n" +
-        "Accept-Language: en-us\n" +
-        "Accept-Encoding: gzip, deflate\n" + 
-        "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)\n" +
-        "";
-        
-        HttpRequest constructedRequest = new HttpRequest(clientRequest);
-        HttpRequest expectedRequest = new HttpRequest("POST", "/docs/index.html", "HTTP/1.0");
-        
-        assertEquals(expectedRequest, constructedRequest);
+    @Test
+    public void testParamsConstructionGET(){
+        String request = "GET /index.html HTTP/1.1\n";
+        HttpRequest instance = new HttpRequest(request);
+        assertEquals("", instance.getParams());
+    }
+    @Test
+    public void testParamsConstructionHEAD(){
+        String request = "HEAD /index.html HTTP/1.1\n";
+        HttpRequest instance = new HttpRequest(request);
+        assertEquals("", instance.getParams());
     }
 }

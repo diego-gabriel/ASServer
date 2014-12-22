@@ -126,4 +126,12 @@ public class ValidadorPeticionTest {
         int resultadoEsperado = 200;
         assertEquals(resultadoEsperado, resultadoCalculado);
     }
+    @Test
+    public void testPostNOT_FOUND(){
+        HttpRequest peticion = new HttpRequest("POST", "/index3.html", "HTTP/1.1");
+        HttpRequestValidator validador = new HttpRequestValidator("root");
+        int resultadoCalculado = validador.getStatus(peticion);
+        int resultadoEsperado = 404;
+        assertEquals(resultadoEsperado, resultadoCalculado);
+    }
 }

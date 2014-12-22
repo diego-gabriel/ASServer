@@ -82,9 +82,9 @@ public class ResourceManagerTest {
     }
     
     @Test 
-    public void getContentLength274(){
+    public void getContentLength288(){
         ResourceManager manager = new ResourceManager();
-        assertEquals(278, manager.getLength("root/index.html"));
+        assertEquals(288, manager.getLength("root/index.html"));
     }
     
     @Test

@@ -58,6 +58,7 @@ public class ServerSocket {
             
             
             HttpRequest request = new HttpRequest(inputRequest);
+            System.out.println(inputRequest);
             response = server.getRespuesta(request);
             output.print(response.toString());
             output.close();
