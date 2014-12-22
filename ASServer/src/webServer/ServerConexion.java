@@ -3,6 +3,8 @@ package webServer;
 import java.net.*;
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ServerConexion {
 
@@ -33,8 +35,11 @@ public class ServerConexion {
                 recivedMessage = entrada.readLine();
                 arrayRequest =  (recivedMessage.trim()).split("\\s+");
                 
-                validarMensaje(arrayRequest);
-                
+                if(validarTipo(arrayRequest[0])&&validarUrl(arrayRequest[1])&&validarVersion(arrayRequest[2])){
+                    System.out.println("proceder con cabecera");
+                }else{
+                    System.out.println("BAD REQUEST!");
+                }
                 System.out.println(recivedMessage);
                 outPut.writeUTF("procesing...");
             //outPut.writeUTF("gracias por conectarte, adios!");
@@ -60,8 +65,34 @@ public class ServerConexion {
         this.serverSocket = serverSocket;
     }
     
-    public void validarMensaje(String[] mensaje){
-        
+    public boolean validarTipo(String tipo){
+        boolean respuesta = false;
+        if(tipo.equalsIgnoreCase("get") || tipo.equalsIgnoreCase("head") || tipo.equalsIgnoreCase("post")){
+            respuesta = true;
+        }else{
+            respuesta = false;
+        }       
+        return respuesta;
     }
+
+    public boolean validarUrl(String url) {
+        String pattern = "[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]";
+        try {
+            Pattern patt = Pattern.compile(pattern);
+            Matcher matcher = patt.matcher(url);
+            return matcher.matches();
+        } catch (RuntimeException e) {
+            return false;
+        }
+    }
+
+    public boolean validarVersion(String version) {
+        if(version.equalsIgnoreCase("http/1.0") || version.equalsIgnoreCase("http/1.1")){
+            return true;
+        }
+        return false;
+    }
+    
+    
     
 }
