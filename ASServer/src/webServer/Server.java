@@ -14,6 +14,7 @@ public class Server {
     
     public static final String SERVER_NAME = "Apachurrito";
     private final String DEFAULT_ROOT = "root";
+    private ServerConexion serverConexion;
     
     public HttpResponse getRespuesta(HttpRequest request){
         HttpResponse response;
@@ -24,6 +25,11 @@ public class Server {
         else
             response = new HttpResponse(estadoPeticion, request.getMethod(), request.getVersion());        
         return response;
+    }
+    
+    public void initService() {
+        serverConexion = new ServerConexion();
+        serverConexion.initServer();
     }
     
 }
