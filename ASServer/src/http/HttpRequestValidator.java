@@ -1,6 +1,7 @@
 package http;
 
 
+import resourceManager.ProcedureManager;
 import resourceManager.ResourceManager;
 
 
@@ -24,14 +25,14 @@ public class HttpRequestValidator {
         version = peticion.getVersion();
         
         ResourceManager manager = new ResourceManager();
-        
+        ProcedureManager procManager = new ProcedureManager();
         if(!implementedMethod(method))
             return 501;
         if(resource.isEmpty())
             return 400;
         if(!version.equals("HTTP/1.1"))
             return 505;
-        if(manager.existe(path + resource))
+        if(manager.existe(path + resource) || procManager.isValidProcedure(resource))
             return 200;
         else
             return 404;

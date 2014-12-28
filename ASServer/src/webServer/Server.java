@@ -3,6 +3,11 @@ package webServer;
 import http.HttpRequest;
 import http.HttpRequestValidator;
 import http.HttpResponse;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import parsers.PDTInputNotParseable;
+import parsers.PDTParser;
+import resourceManager.ProcedureManager;
 
 /**
  *
@@ -18,7 +23,21 @@ public class Server {
         HttpRequestValidator validador = new HttpRequestValidator(DEFAULT_ROOT);
         int estadoPeticion = validador.getStatus(request);
         if (estadoPeticion == 200) {
-            response = new HttpResponse(estadoPeticion, DEFAULT_ROOT + request.getResource(), request.getMethod(), request.getVersion());
+            ProcedureManager procManager = new ProcedureManager();
+            if (procManager.isValidProcedure(request.getResource())){
+                PDTParser parser = new PDTParser();
+                try {
+                    String[][][] tables = parser.parse(request.getParams());
+                    procManager.execProc(tables, request.getResource());
+                    response = new HttpResponse(estadoPeticion, "apps" + request.getResource(), request.getMethod(), request.getVersion());
+                } catch (PDTInputNotParseable ex) {
+                    response = new HttpResponse(400, request.getMethod(), request.getVersion());
+                }
+            }
+            else
+                response = new HttpResponse(estadoPeticion, DEFAULT_ROOT + request.getResource(), request.getMethod(), request.getVersion());
+            
+            
         } else {
             response = new HttpResponse(estadoPeticion, request.getMethod(), request.getVersion());
         }
