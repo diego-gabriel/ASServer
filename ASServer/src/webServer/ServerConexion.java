@@ -59,7 +59,6 @@ public class ServerConexion {
     public void setServerSocket(ServerSocket serverSocket) {
         this.serverSocket = serverSocket;
     }
-
     public boolean validarTipo(String tipo) {
         boolean respuesta = false;
         if (tipo.equalsIgnoreCase("get") || tipo.equalsIgnoreCase("head") || tipo.equalsIgnoreCase("post")) {
@@ -82,7 +81,9 @@ public class ServerConexion {
     }
 
     public boolean validarVersion(String version) {
+
         if (version.equalsIgnoreCase("http/1.0") || version.equalsIgnoreCase("http/1.1")) {
+
             return true;
         }
         return false;

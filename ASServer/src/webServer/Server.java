@@ -33,5 +33,4 @@ public class Server {
     public ServerConexion getServerConexion() {
         return serverConexion;
     }
-
 }
