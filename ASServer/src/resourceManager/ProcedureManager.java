@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  * @author deigo-gabriel
  */
 public class ProcedureManager {
-    public final Procedure[] procedures = {new SampleProc()};
+    public final Procedure[] procedures = {new SampleProc(), new SumarProc()};
     
     public boolean isValidProcedure(String thatProc){
         return findProc(thatProc) != null;
