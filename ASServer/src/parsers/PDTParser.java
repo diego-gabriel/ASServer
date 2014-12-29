@@ -39,7 +39,7 @@ public class PDTParser {
             } else {
                 tables = new String[0][0][0];
             }
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             throw new PDTInputNotParseable();
         }
         return tables;

@@ -1,0 +1,55 @@
+-------------------------------
+PDT (Protocolo de Tablas)
+-------------------------------
+
+Los datos seran enviados via post, en una cadena de 
+carateres. Una sola linea, con todos los datos de la tabla.
+
+los datos seran separados por el caracter '|' (or) sin las 
+comillas. Notese que el caracter de separacion solo SEPARA 
+datos, por lo que solo se encontrara entre 2 datos 
+distintos
+
+El primer numero representara el numero de tablas, seguido 
+por la descripcion de cada tabla.
+
+Ej.: 
+
+7|.....        /----> 7 tablas
+
+Luego vendran las descripciones de cada tabla.
+Para cada tabla el primer numero 'F' es el numero de 
+filas, seguido de un numero 'C', el numero de columnas.
+Luego vendran F bloques de C datos cada uno, que 
+representan las F filas.
+
+Ej.:
+
+1|2|3|1|2|3|4|5|6     /-----> 1 tabla: {{'1', '2', '3'},
+										{'4', '5', '6'}}
+
+2|2|3|1|2|3|4|5|6|1|2|7|8  /-----> 2 tablas: 
+									   {{'1', '2', '3'},
+										{'4', '5', '6'}}
+										{{'7', '8'}}
+
+Notese que una tabla puede representarse como una matriz.
+
+-------------------------
+PDT Parser
+-------------------------
+
+El metodo parse() de PDTParser tomara como entrada una 
+cadena.
+En caso de que la cadena contenga una o varias tablas como 
+las descritas anteriormente, devolvera un arreglo de 3 
+dimensiones del tipo: String[][][] donde estaran todas las 
+tablas descritas en la cadena. En caso de que la cadena no 
+sea parte del lenguaje arriba descrito, el metodo lanzara 
+una excepcion PDTInputNotParseable.
+
+
+
+
+
+
