@@ -1,1 +1,11 @@
-<html>This is a Sample Procedure {nOfTables: 0}</html>
+<html>This is a Sample Procedure {nOfTables: 1}<table>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+</tr>
+</table>
+</html>
