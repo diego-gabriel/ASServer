@@ -18,32 +18,33 @@ public class ServerConexion {
     private String recivedMessage;
     private String[] arrayRequest;
     private Server server;
-   
-    public ServerConexion(Server server){
+
+    public ServerConexion(Server server) {
         this.server = server;
     }
-    
-    //inicio de servicio
 
+    //inicio de servicio
     public void initServer() {
         BufferedReader entrada;
         boolean activo = true;
         try {
             serverSocket = new ServerSocket(serverPort);
-            
+
             while (activo) {
-                
+
                 socket = serverSocket.accept();
                 //Recepcion de mensaje
                 ServerSocketDataReader reader = new ServerSocketDataReader();
                 recivedMessage = reader.readDataFrom(socket);
-                System.out.println(recivedMessage + "Fin");
-                
-                HttpResponse response =  server.getRespuesta(new HttpRequest(recivedMessage));
-                
-                outPut = new DataOutputStream(socket.getOutputStream());
-                outPut.writeUTF(response.toString());
-                outPut.close();
+        System.out.println("-------------\nPROCESSING REQUEST\n---------------\n"+recivedMessage);
+                if (!recivedMessage.trim().equals("")) {
+                    HttpResponse response = server.getRespuesta(new HttpRequest(recivedMessage));
+
+                    outPut = new DataOutputStream(socket.getOutputStream());
+                    outPut.writeUTF(response.toString());
+                    System.out.println("---------------\nSENDING\n-------------------\n" + response.toString());
+                    outPut.close();
+                }
             }
 
         } catch (IOException e) {
@@ -59,6 +60,7 @@ public class ServerConexion {
     public void setServerSocket(ServerSocket serverSocket) {
         this.serverSocket = serverSocket;
     }
+
     public boolean validarTipo(String tipo) {
         boolean respuesta = false;
         if (tipo.equalsIgnoreCase("get") || tipo.equalsIgnoreCase("head") || tipo.equalsIgnoreCase("post")) {

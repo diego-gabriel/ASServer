@@ -101,6 +101,20 @@ public class PDTParserTest {
             fail();
         }
             
+    }@Test
+    public void testParseOK_FromForm(){
+        String input = "  data-form=   2|2|3|1|2|3|4|5|6|1|2||    ";
+        PDTParser parser = new PDTParser();
+        String[][][] expected = {{{"1", "2", "3"},
+				{"4", "5", "6"}},
+                                {{"", ""}}};
+        try{
+            assertArrayEquals(expected, parser.parse(input));
+        } catch (PDTInputNotParseable e){
+            e.printStackTrace();
+            fail();
+        }
+            
     }
     
     

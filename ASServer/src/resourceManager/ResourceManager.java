@@ -14,7 +14,7 @@ public class ResourceManager {
     
     public boolean existe(String resource){
         
-        File file = new File(completeExtension(resource));
+        File file = new File(resource);
         return file.exists();
     }
 

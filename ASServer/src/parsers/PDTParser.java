@@ -7,11 +7,16 @@ package parsers;
 public class PDTParser {
 
     public String[][][] parse(String input) throws PDTInputNotParseable {
+       System.out.println("parsing: " + input);
         String[][][] tables;
 
-        String[] tokens = (input.trim() + "|").split("\\|");
+        input = normalizeInput(input);
+        System.out.println("normalized to: " + input);
+        
+        String[] tokens = (input + "|").split("\\|", -1);
         try {
-            if (!input.trim().equals("")) {
+            if (!input.equals("")) {
+                
                 int nOfTables = Integer.parseInt(tokens[0]);
 
                 tables = new String[nOfTables][][];
@@ -38,5 +43,13 @@ public class PDTParser {
             throw new PDTInputNotParseable();
         }
         return tables;
+    }
+    
+    private String normalizeInput(String input){
+        input = input.trim();
+        if (input.startsWith("data-form="))
+            input = input.substring("data-form=".length()).trim();
+        
+        return input;
     }
 }

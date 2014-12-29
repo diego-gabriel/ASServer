@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
+import java.net.URLDecoder;
 
 /**
  *
@@ -43,8 +44,8 @@ public class ServerSocketDataReader {
             inputRequest = inputRequest + "\n";
         }
         inputRequest = inputRequest + readBody(contentLength, input);
-
-        return inputRequest;
+        
+        return URLDecoder.decode(inputRequest, "UTF-8");
     }
 
     
