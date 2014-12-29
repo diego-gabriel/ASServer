@@ -25,13 +25,20 @@ public class Server {
         if (estadoPeticion == 200) {
             ProcedureManager procManager = new ProcedureManager();
             if (procManager.isValidProcedure(request.getResource())){
-                PDTParser parser = new PDTParser();
-                try {
-                    String[][][] tables = parser.parse(request.getParams());
-                    procManager.execProc(tables, request.getResource());
+                if (request.getMethod().equals("POST")){
+                    PDTParser parser = new PDTParser();
+                    try {
+                        String[][][] tables = parser.parse(request.getParams());
+                        procManager.execProc(tables, request.getResource());
+                        response = new HttpResponse(estadoPeticion, "apps" + request.getResource(), request.getMethod(), request.getVersion());
+                    } catch (PDTInputNotParseable ex) {
+                        response = new HttpResponse(400, request.getMethod(), request.getVersion());
+                    }
+                }
+                else{
+                    procManager.generateFormFor(request.getResource());
+                    
                     response = new HttpResponse(estadoPeticion, "apps" + request.getResource(), request.getMethod(), request.getVersion());
-                } catch (PDTInputNotParseable ex) {
-                    response = new HttpResponse(400, request.getMethod(), request.getVersion());
                 }
             }
             else
